@@ -1,0 +1,89 @@
+GET http://localhost:5000/users
+
+###
+DELETE http://localhost:5000/users/1
+
+###
+GET http://localhost:5000/animal_user
+###
+GET http://localhost:5000/users/3
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "user",
+    "email": "rizki1@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "rizki@gmail.com",
+    "password": "12345678"
+}
+
+###
+DELETE http://localhost:5000/users/1
+
+
+//admin ----------------------------------
+
+###
+POST http://localhost:5000/loginAdmin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "12345678"
+}
+
+//animal -------------------------------------------
+
+###
+GET http://localhost:5000/animal
+
+###
+GET http://localhost:5000/animal/proses
+
+###
+GET http://localhost:5000/animal/approve
+
+###
+POST http://localhost:5000/animal
+Content-Type: application/json
+
+{
+    "name": "Hariimau",
+    "breed": "Maine",
+    "sex": "Male",
+    "age": "20",
+    "color": "Black, yellow",
+    "description": "Kucing indah pemberani yang indah dan menawan yang perlu dikasih sayangi ",
+    "status_adoption": "publish"
+}
+
+###
+PATCH  http://localhost:5000/animal/publish/1
+
+###
+PATCH  http://localhost:5000/animal/proses/1
+
+###
+PATCH  http://localhost:5000/animal/approve/1
+
+###
+GET http://localhost:5000/animal/1
+
+###
+PATCH http://localhost:5000/animal/1
+
+###
+DELETE http://localhost:5000/animal/1
+
+
